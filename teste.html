@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Título do Site</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 25px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+            animation: rotate 4s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .image-container img {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+        }
+
+        .caption {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .first-letter{
+            font-size: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .heart-btn{
+            border-radius: 50%;
+            background-color: #FF0000;
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .heart-btn:hover{
+            background-color: rgb(246, 0, 102);
+        }
+    </style>
+</head>
+<body>
+    <h1>i<span class="first-letter">R</span>ailson Não Presta!</h1>
+
+    <div class="image-container">
+        <img src="irailson.jpeg" alt="Imagem Girando">
+    </div>
+
+    <p class="caption">você é um cachorro,safado, carinhoso, bandido ,viralata!</p>
+
+    <button onclick="playAudio()" class="heart-btn">tua roda</button>
+
+    <audio src="Cachorro Perigoso _Clipe Oficial_ (Tchê Garotos)(MP3_160K).mp3" id="audio-player"></audio>
+
+    <script>
+        function playAudio() {
+            var audioPlayer = document.getElementById('audio-player');
+            audioPlayer.currentTime = 7;
+            audioPlayer.play();
+        }
+    </script>
+</body>
+</html>
+
+
